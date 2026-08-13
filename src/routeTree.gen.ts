@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as GrcAiGovernanceRouteImport } from './routes/grc-ai-governance'
 import { Route as ServicesRouteImport } from './routes/services'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GrcAiGovernanceRoute = GrcAiGovernanceRouteImport.update({
@@ -31,30 +37,34 @@ const ServicesRoute = ServicesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/grc-ai-governance': typeof GrcAiGovernanceRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/grc-ai-governance': typeof GrcAiGovernanceRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/grc-ai-governance': typeof GrcAiGovernanceRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/grc-ai-governance' | '/services'
+  fullPaths: '/' | '/about' | '/grc-ai-governance' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/grc-ai-governance' | '/services'
-  id: '__root__' | '/' | '/grc-ai-governance' | '/services'
+  to: '/' | '/about' | '/grc-ai-governance' | '/services'
+  id: '__root__' | '/' | '/about' | '/grc-ai-governance' | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   GrcAiGovernanceRoute: typeof GrcAiGovernanceRoute
   ServicesRoute: typeof ServicesRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/grc-ai-governance': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   GrcAiGovernanceRoute: GrcAiGovernanceRoute,
   ServicesRoute: ServicesRoute,
 }
