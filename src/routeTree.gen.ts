@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CareersRouteImport } from './routes/careers'
+import { Route as CodeOfConductRouteImport } from './routes/code-of-conduct'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GrcAiGovernanceRouteImport } from './routes/grc-ai-governance'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
@@ -30,6 +31,11 @@ const AboutRoute = AboutRouteImport.update({
 const CareersRoute = CareersRouteImport.update({
   id: '/careers',
   path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CodeOfConductRoute = CodeOfConductRouteImport.update({
+  id: '/code-of-conduct',
+  path: '/code-of-conduct',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/careers': typeof CareersRoute
+  '/code-of-conduct': typeof CodeOfConductRoute
   '/contact': typeof ContactRoute
   '/grc-ai-governance': typeof GrcAiGovernanceRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/careers': typeof CareersRoute
+  '/code-of-conduct': typeof CodeOfConductRoute
   '/contact': typeof ContactRoute
   '/grc-ai-governance': typeof GrcAiGovernanceRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/careers': typeof CareersRoute
+  '/code-of-conduct': typeof CodeOfConductRoute
   '/contact': typeof ContactRoute
   '/grc-ai-governance': typeof GrcAiGovernanceRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/careers'
+    | '/code-of-conduct'
     | '/contact'
     | '/grc-ai-governance'
     | '/privacy-policy'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/careers'
+    | '/code-of-conduct'
     | '/contact'
     | '/grc-ai-governance'
     | '/privacy-policy'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/careers'
+    | '/code-of-conduct'
     | '/contact'
     | '/grc-ai-governance'
     | '/privacy-policy'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CareersRoute: typeof CareersRoute
+  CodeOfConductRoute: typeof CodeOfConductRoute
   ContactRoute: typeof ContactRoute
   GrcAiGovernanceRoute: typeof GrcAiGovernanceRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/careers'
       fullPath: '/careers'
       preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/code-of-conduct': {
+      id: '/code-of-conduct'
+      path: '/code-of-conduct'
+      fullPath: '/code-of-conduct'
+      preLoaderRoute: typeof CodeOfConductRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CareersRoute: CareersRoute,
+  CodeOfConductRoute: CodeOfConductRoute,
   ContactRoute: ContactRoute,
   GrcAiGovernanceRoute: GrcAiGovernanceRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
