@@ -63,7 +63,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="border-b border-border bg-surface">
+      <section className="bg-navy text-navy-foreground">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
           <StatCounter value={100} suffix="+" label="Enterprise Engagements Completed" />
           <StatCounter value={95} suffix="%" label="Client Retention Rate" />
