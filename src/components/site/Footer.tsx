@@ -34,15 +34,18 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-navy-muted/60 bg-navy text-navy-foreground">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
+    <footer className="border-t border-navy-foreground/10 bg-navy text-navy-foreground">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
-          <img src={logo.url} alt="NexTalenz" className="h-8 w-auto brightness-0 invert" />
-          <p className="mt-4 text-sm leading-relaxed text-navy-foreground/70">
+          <Link to="/" className="text-xl font-extrabold tracking-[0.14em]">
+            NEX<span className="text-sap">TALENZ</span>
+          </Link>
+          <p className="mt-4 text-sm leading-relaxed text-navy-foreground/60">
             {SITE.name} delivers elite SAP &amp; enterprise application talent alongside automated
             GRC and AI governance solutions for global enterprises.
           </p>
-          <ul className="mt-5 space-y-2 text-sm text-navy-foreground/70">
+          <ul className="mt-5 space-y-2 text-sm text-navy-foreground/60">
+
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 size-4 shrink-0" />
               {SITE.address}
