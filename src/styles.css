@@ -98,9 +98,9 @@
   --sap: oklch(0.62 0.075 82);
   --sap-foreground: oklch(0.15 0.008 80);
   --sap-soft: oklch(0.955 0.022 86);
-  --grc: oklch(0.35 0.02 80);
+  --grc: oklch(0.5 0.055 80);
   --grc-foreground: oklch(0.985 0.002 85);
-  --grc-soft: oklch(0.958 0.004 85);
+  --grc-soft: oklch(0.955 0.018 84);
   /* Barely-there neutral band for section rhythm */
   --surface: oklch(0.978 0.003 85);
 
@@ -142,9 +142,9 @@
   --navy-foreground: oklch(0.97 0.004 85);
   --navy-muted: oklch(0.2 0.005 80);
   --sap: oklch(0.8 0.09 85);
-  --grc: oklch(0.85 0.004 85);
+  --grc: oklch(0.82 0.06 84);
   --sap-soft: oklch(0.26 0.03 85);
-  --grc-soft: oklch(0.24 0.004 80);
+  --grc-soft: oklch(0.24 0.02 84);
   --surface: oklch(0.155 0.003 80);
 }
 
