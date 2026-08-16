@@ -172,16 +172,26 @@
 
 @utility surface-grid {
   background-image:
-    linear-gradient(to right, oklch(1 0 0 / 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, oklch(1 0 0 / 0.05) 1px, transparent 1px);
-  background-size: 56px 56px;
+    linear-gradient(to right, oklch(1 0 0 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(1 0 0 / 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
 }
 
 @utility navy-gradient {
+  background-color: oklch(0.12 0.002 80);
+  background-image:
+    radial-gradient(90% 120% at 85% 0%, oklch(0.62 0.08 84 / 0.22) 0%, transparent 60%),
+    radial-gradient(70% 90% at 0% 100%, oklch(0.62 0.08 84 / 0.1) 0%, transparent 65%),
+    linear-gradient(150deg, oklch(0.1 0.002 80) 0%, oklch(0.17 0.006 82) 100%);
+}
+
+/* Thin gold rule used to accent dark sections and headings */
+@utility gold-rule {
   background-image: linear-gradient(
-    140deg,
-    oklch(0.13 0.004 270) 0%,
-    oklch(0.19 0.006 270) 50%,
-    oklch(0.26 0.02 85) 100%
+    90deg,
+    var(--sap) 0%,
+    color-mix(in oklab, var(--sap) 35%, transparent) 60%,
+    transparent 100%
   );
 }
+
