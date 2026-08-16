@@ -57,12 +57,13 @@ export function StatCounter({
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-4xl font-bold tracking-tight sm:text-5xl">
+      <div className="text-4xl font-bold tracking-tight text-sap sm:text-5xl">
         {prefix}
         {String(display)}
         {suffix}
       </div>
-      <p className="mt-2 text-sm text-muted-foreground">{label}</p>
+      <p className="mt-2 text-xs font-medium uppercase tracking-[0.12em] opacity-60">{label}</p>
     </div>
   );
+
 }
