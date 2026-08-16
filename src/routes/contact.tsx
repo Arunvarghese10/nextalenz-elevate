@@ -23,7 +23,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Talk to NexTalenz about SAP staffing, GRC & AI governance, or project consulting. Brisbane-based, responding within 24 hours.",
+          "Talk to NexTalenz about SAP staffing, GRC & AI governance, or project consulting. Southport, Queensland based, responding within 24 hours.",
       },
       { property: "og:title", content: "Contact NexTalenz | Enterprise Enquiries" },
       {
@@ -102,10 +102,6 @@ function ContactPage() {
               <div className="space-y-2">
                 <Label htmlFor="organization">Organization</Label>
                 <Input id="organization" name="organization" required placeholder="Company name" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="phone">Phone</Label>
-                <Input id="phone" name="phone" type="tel" placeholder="+61 ..." />
               </div>
               <div className="space-y-2 sm:col-span-2">
                 <Label htmlFor="pillar">Preferred Pillar</Label>

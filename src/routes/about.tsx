@@ -12,7 +12,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Based in Brisbane, Australia, NexTalenz delivers agile SAP and GRC/AI governance consulting to clients across APAC, India and the Middle East.",
+          "Based in Southport, Queensland, Australia, NexTalenz delivers agile SAP and GRC/AI governance consulting to clients across APAC, India and the Middle East.",
       },
       { property: "og:title", content: "About NexTalenz | Global Delivery Model" },
       {
@@ -57,7 +57,7 @@ function AboutPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-foreground/75">
             NexTalenz delivers agile, high-impact consulting and staffing solutions across SAP
-            practices and GRC/AI Governance domains. Based in Brisbane, Australia, we serve clients
+            practices and GRC/AI Governance domains. Based in Southport, Queensland, Australia, we serve clients
             globally with deep domain knowledge and execution speed.
           </p>
         </div>
@@ -87,7 +87,7 @@ function AboutPage() {
               <MapPin className="size-5 text-sap" />
               <h3 className="mt-4 font-semibold">Primary Operational Hub</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Brisbane, Australia (QLD 4035)
+                5 Davenport Street, Southport QLD 4215, Australia
               </p>
             </div>
             <div className="rounded-xl border border-border bg-card p-6">
