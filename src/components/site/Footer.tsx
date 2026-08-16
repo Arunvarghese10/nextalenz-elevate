@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Mail, Clock } from "lucide-react";
 
+import logo from "@/assets/nextalenz-logo.png.asset.json";
 import { SITE } from "@/lib/site";
 
 const columns = [
@@ -36,12 +37,7 @@ export function Footer() {
     <footer className="border-t border-navy-muted/60 bg-navy text-navy-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="grid h-8 w-8 place-items-center rounded-md bg-navy-foreground/10 text-sm font-bold">
-              N
-            </span>
-            <span className="text-lg font-bold tracking-tight">NexTalenz</span>
-          </div>
+          <img src={logo.url} alt="NexTalenz" className="h-8 w-auto brightness-0 invert" />
           <p className="mt-4 text-sm leading-relaxed text-navy-foreground/70">
             {SITE.name} delivers elite SAP &amp; enterprise application talent alongside automated
             GRC and AI governance solutions for global enterprises.

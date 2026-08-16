@@ -1,11 +1,11 @@
 export const SITE = {
   name: "NexTalenz Consulting",
   tagline: "Modern Enterprise Talent & AI Governance Solutions",
-  address: "Brisbane, QLD 4035, Australia",
-  footprint: "Primary Hub: Brisbane, Australia | Global Delivery: APAC, India & Middle East",
+  address: "5 Davenport Street, Southport QLD 4215, Australia",
+  footprint: "Primary Hub: Southport, Queensland, Australia | Global Delivery: APAC, India & Middle East",
   sla: "14-Day Guaranteed Shortlist SLA",
   responseSla: "Within 24 Hours",
-  email: "hello@nextalenz.com",
+  email: "sales@nextalenz.com",
 } as const;
 
 export const NAV_LINKS = [

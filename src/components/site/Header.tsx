@@ -2,19 +2,15 @@ import { Link } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 
+import logo from "@/assets/nextalenz-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { NAV_LINKS } from "@/lib/site";
 
 function Wordmark() {
   return (
-    <Link to="/" className="flex items-center gap-2">
-      <span className="grid h-8 w-8 place-items-center rounded-md bg-navy text-sm font-bold text-navy-foreground">
-        N
-      </span>
-      <span className="text-lg font-bold tracking-tight">
-        Nex<span className="text-sap">Talenz</span>
-      </span>
+    <Link to="/" className="flex items-center">
+      <img src={logo.url} alt="NexTalenz" className="h-7 w-auto sm:h-8" />
     </Link>
   );
 }
