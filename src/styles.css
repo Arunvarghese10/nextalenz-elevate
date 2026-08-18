@@ -195,3 +195,115 @@
   );
 }
 
+
+/* ============================================================
+   Premium gold gradient system
+   ============================================================ */
+
+:root {
+  --gold-1: oklch(0.86 0.075 92);
+  --gold-2: oklch(0.74 0.1 86);
+  --gold-3: oklch(0.56 0.075 78);
+  --gradient-gold: linear-gradient(120deg, var(--gold-3) 0%, var(--gold-2) 38%, var(--gold-1) 62%, var(--gold-2) 100%);
+  --gradient-gold-soft: linear-gradient(135deg, color-mix(in oklab, var(--gold-2) 18%, transparent) 0%, transparent 60%);
+  --shadow-gold: 0 18px 45px -22px color-mix(in oklab, var(--gold-2) 70%, transparent);
+}
+
+.dark {
+  --gold-1: oklch(0.9 0.075 92);
+  --gold-2: oklch(0.8 0.095 86);
+  --gold-3: oklch(0.62 0.08 78);
+}
+
+/* Gold gradient fill for text */
+@utility text-gradient-gold {
+  background-image: var(--gradient-gold);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Solid gold gradient surface */
+@utility bg-gradient-gold {
+  background-image: var(--gradient-gold);
+}
+
+/* Hairline gold gradient border on any surface */
+@utility gold-border {
+  position: relative;
+  isolation: isolate;
+}
+@utility gold-border-after {
+  content: "";
+}
+
+/* Ambient radial gold glow */
+@utility gold-glow {
+  background-image: radial-gradient(
+    closest-side,
+    color-mix(in oklab, var(--gold-2) 34%, transparent),
+    transparent 100%
+  );
+  filter: blur(10px);
+}
+
+/* Faint dotted grid for light sections */
+@utility dot-grid {
+  background-image: radial-gradient(
+    color-mix(in oklab, var(--gold-3) 22%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+}
+
+/* Premium card: subtle gold wash + gradient top rule on hover */
+@utility card-premium {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  background-image: var(--gradient-gold-soft);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+}
+@utility card-premium-hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+  border-color: color-mix(in oklab, var(--gold-2) 45%, transparent);
+}
+
+/* Reveal-on-load animation */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@utility rise {
+  animation: rise-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes shimmer-sweep {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@utility gold-shimmer {
+  background-image: var(--gradient-gold);
+  background-size: 200% 100%;
+  animation: shimmer-sweep 6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .gold-shimmer {
+    animation: none;
+  }
+}
