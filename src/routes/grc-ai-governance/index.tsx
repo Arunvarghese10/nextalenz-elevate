@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Activity, ArrowRight, Bot, Handshake, ShieldCheck } from "lucide-react";
+import { Activity, ArrowRight, Handshake, ShieldCheck, Target } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -30,14 +30,19 @@ export const Route = createFileRoute("/grc-ai-governance/")({
 
 const services = [
   {
-    icon: Bot,
-    title: "AI Risk Assessment",
-    to: "/grc-ai-governance/ai-risk-assessment" as const,
+    icon: Target,
+    title: "Unified AI Governance",
+    to: "/grc-ai-governance/unified-ai-governance" as const,
   },
   {
     icon: Activity,
     title: "Continuous Controls Monitoring",
     to: "/grc-ai-governance/continuous-controls-monitoring" as const,
+  },
+  {
+    icon: ShieldCheck,
+    title: "Predictive Cyber Risk",
+    to: "/grc-ai-governance/predictive-cyber-risk" as const,
   },
   {
     icon: Handshake,
@@ -51,8 +56,14 @@ function GrcPage() {
     <>
       <section className="relative overflow-hidden navy-gradient text-navy-foreground">
         <div className="absolute inset-0 surface-grid opacity-60" aria-hidden />
-        <div className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70" aria-hidden />
-        <div className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40" aria-hidden />
+        <div
+          className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40"
+          aria-hidden
+        />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-navy-foreground/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
             <ShieldCheck className="size-3.5" />
@@ -79,7 +90,7 @@ function GrcPage() {
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold sm:text-4xl">Services</h2>
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <Link
               key={service.title}
@@ -112,8 +123,8 @@ function GrcPage() {
         <div className="rounded-xl border border-primary/35 bg-grc-soft p-7 text-sm leading-relaxed text-muted-foreground">
           Already running SAP or a modern ERP? Layer AI governance on top without a second vendor
           relationship.{" "}
-          <Link to="/enterprise-applications" className="font-semibold text-grc">
-            See Enterprise Applications
+          <Link to="/services" hash="hct-modern-erp" className="font-semibold text-grc">
+            See HCT &amp; Modern ERP
           </Link>
         </div>
       </section>

@@ -15,7 +15,10 @@ export function GrcSubPage({ eyebrow, title, body, externalLink }: GrcSubPagePro
     <>
       <section className="relative overflow-hidden navy-gradient text-navy-foreground">
         <div className="absolute inset-0 surface-grid opacity-60" aria-hidden />
-        <div className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70" aria-hidden />
+        <div
+          className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70"
+          aria-hidden
+        />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-navy-foreground/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
             {eyebrow}

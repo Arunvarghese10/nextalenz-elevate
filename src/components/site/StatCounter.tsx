@@ -65,5 +65,4 @@ export function StatCounter({
       <p className="mt-2 text-xs font-medium uppercase tracking-[0.12em] opacity-60">{label}</p>
     </div>
   );
-
 }

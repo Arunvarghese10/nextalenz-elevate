@@ -39,7 +39,9 @@ export function Header() {
 
         <div className="hidden lg:block">
           <Button asChild variant="hero" size="default">
-            <Link to="/contact" search={{ pillar: undefined }}>Book a Strategy Session</Link>
+            <Link to="/contact" search={{ pillar: undefined }}>
+              Book a Strategy Session
+            </Link>
           </Button>
         </div>
 

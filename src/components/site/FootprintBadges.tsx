@@ -1,9 +1,9 @@
 import { Globe2 } from "lucide-react";
 
 const BADGES = [
-  { region: "Australia", role: "HQ" },
-  { region: "India", role: "Offshore Delivery" },
-  { region: "UAE", role: "Middle East Hub" },
+  { region: "APAC / ANZ", role: "Australia · New Zealand · Singapore · India · Philippines" },
+  { region: "EMEA", role: "United Kingdom · Ireland · Germany · Netherlands · UAE" },
+  { region: "Americas", role: "United States · Canada · Mexico" },
 ];
 
 interface FootprintProps {
@@ -23,9 +23,7 @@ export function FootprintBadges({ headline, body }: FootprintProps) {
           <div key={badge.region} className="card-premium p-6 text-center">
             <Globe2 className="mx-auto size-5 text-sap" />
             <p className="mt-3 font-semibold">{badge.region}</p>
-            <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-              {badge.role}
-            </p>
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{badge.role}</p>
           </div>
         ))}
       </div>

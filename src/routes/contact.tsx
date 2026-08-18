@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Clock, Globe, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 
@@ -26,12 +26,13 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Tell us about your next SAP hire or GRC assessment. Replies within 1 business day, from a senior team member.",
+          "Tell us about your next ERP program, hiring need, or GRC assessment. Replies within 1 business day, from a senior team member.",
       },
       { property: "og:title", content: "Contact NexTalenz — Talk to a Partner, Not a Chatbot" },
       {
         property: "og:description",
-        content: "Tell us about your next SAP hire or GRC assessment. Replies within 1 business day.",
+        content:
+          "Tell us about your next ERP program, hiring need, or GRC assessment. Replies within 1 business day.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -41,10 +42,10 @@ export const Route = createFileRoute("/contact")({
 });
 
 const OPTIONS = [
-  { label: "Contract Hire", pillar: "erp" },
-  { label: "Permanent Hire", pillar: "erp" },
-  { label: "SAP Project Consulting", pillar: "erp" },
-  { label: "GRC / AI Governance Assessment", pillar: "grc" },
+  { label: "HCT & Modern ERP", pillar: "erp" },
+  { label: "GRC & AI Governance Assessment", pillar: "grc" },
+  { label: "Talent Solutions & RPO", pillar: "erp" },
+  { label: "Product Engineering", pillar: "erp" },
   { label: "Something Else", pillar: "" },
 ] as const;
 
@@ -72,16 +73,23 @@ function ContactPage() {
     <>
       <section className="relative overflow-hidden navy-gradient text-navy-foreground">
         <div className="absolute inset-0 surface-grid opacity-60" aria-hidden />
-        <div className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70" aria-hidden />
-        <div className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40" aria-hidden />
+        <div
+          className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40"
+          aria-hidden
+        />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <h1 className="rise max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
-            Let&apos;s talk about your <span className="text-gradient-gold">next hire.</span>
+            Ready to modernize, scale, or secure your enterprise?{" "}
+            <span className="text-gradient-gold">Let&apos;s talk.</span>
           </h1>
           <ul className="mt-6 space-y-2 text-lg text-navy-foreground/75">
             <li>Talk to a partner, not a chatbot.</li>
             {showShortlistLine && <li>From enquiry to shortlist, in 14 days.</li>}
-            <li>Let&apos;s find your next hire.</li>
+            <li>We&apos;ll reply within 1 business day.</li>
           </ul>
         </div>
       </section>
@@ -97,7 +105,13 @@ function ContactPage() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Work Email</Label>
-                <Input id="email" name="email" type="email" required placeholder="jane@company.com" />
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="jane@company.com"
+                />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="company">Company</Label>
@@ -163,11 +177,15 @@ function ContactPage() {
                 </li>
                 <li className="flex gap-3">
                   <MapPin className="mt-0.5 size-4 shrink-0 text-sap" />
-                  {SITE.address}
+                  Headquarters: {SITE.address}
+                </li>
+                <li className="flex gap-3">
+                  <Globe className="mt-0.5 size-4 shrink-0 text-sap" />
+                  {SITE.website}
                 </li>
                 <li className="flex gap-3">
                   <Clock className="mt-0.5 size-4 shrink-0 text-sap" />
-                  {SITE.responseSla}
+                  Replies {SITE.responseSla.toLowerCase()}
                 </li>
               </ul>
             </div>
@@ -175,7 +193,7 @@ function ContactPage() {
         </div>
 
         <p className="mt-14 text-center text-sm text-muted-foreground">
-          Next-gen recruiting, simplified. Specialised SAP talent for global enterprises since 2024.
+          Enterprise technology, talent &amp; governance — built for global enterprises since 2024.
         </p>
       </section>
     </>

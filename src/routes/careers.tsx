@@ -22,36 +22,42 @@ export const Route = createFileRoute("/careers")({
       {
         name: "description",
         content:
-          "Join the NexTalenz global consultant network — SAP consultants, GRC advisors and AI specialists working on high-impact enterprise projects.",
+          "Join the NexTalenz global consultant network — ERP specialists, GRC advisors, engineers and AI specialists working on high-impact enterprise projects.",
       },
       { property: "og:title", content: "Careers & Talent Network | NexTalenz" },
       {
         property: "og:description",
         content:
-          "Register your profile and get matched to enterprise SAP, GRC and AI governance engagements worldwide.",
+          "Register your profile and get matched to enterprise ERP, GRC, talent and product engineering engagements worldwide.",
       },
     ],
   }),
   component: CareersPage,
 });
 
-const domains = ["SAP", "GRC", "AI", "Other"];
+const domains = [
+  "HCT & Modern ERP",
+  "GRC & AI Governance",
+  "Talent & RPO",
+  "Product Engineering",
+  "Other",
+];
 
 const benefits = [
   {
     icon: Globe2,
     title: "Global Engagements",
-    copy: "Enterprise programs across APAC, India and the Middle East.",
+    copy: "Enterprise programs across APAC/ANZ, EMEA and the Americas — 14 countries and counting.",
   },
   {
     icon: Users,
     title: "Consultant-Led Vetting",
-    copy: "Screened by practitioners who understand your module depth.",
+    copy: "Screened by practitioners who understand your module and technical depth.",
   },
   {
     icon: Sparkles,
     title: "Emerging Practice Access",
-    copy: "Early access to AI governance and continuous compliance projects.",
+    copy: "Early access to AI governance, product engineering, and continuous compliance projects.",
   },
 ];
 
@@ -75,8 +81,14 @@ function CareersPage() {
     <>
       <section className="relative overflow-hidden navy-gradient text-navy-foreground">
         <div className="absolute inset-0 surface-grid opacity-60" aria-hidden />
-        <div className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70" aria-hidden />
-        <div className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40" aria-hidden />
+        <div
+          className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40"
+          aria-hidden
+        />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-navy-foreground/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
             Talent Network
@@ -85,8 +97,8 @@ function CareersPage() {
             Join the NexTalenz Global Consultant Network
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-navy-foreground/75">
-            We connect top-tier SAP consultants, GRC advisors, and AI specialists with high-impact
-            enterprise projects worldwide.
+            We connect top-tier ERP consultants, GRC advisors, engineers, and AI specialists with
+            high-impact enterprise projects worldwide.
           </p>
         </div>
       </section>
@@ -94,7 +106,10 @@ function CareersPage() {
       <section className="border-b border-border bg-surface">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 py-14 sm:px-6 lg:grid-cols-3 lg:px-8">
           {benefits.map((benefit) => (
-            <article key={benefit.title} className="rounded-xl border border-border bg-background p-6">
+            <article
+              key={benefit.title}
+              className="rounded-xl border border-border bg-background p-6"
+            >
               <benefit.icon className="size-5 text-grc" />
               <h2 className="mt-4 font-semibold">{benefit.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{benefit.copy}</p>
@@ -104,10 +119,7 @@ function CareersPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
-        <form
-          onSubmit={handleSubmit}
-          className="card-premium p-8 shadow-[var(--shadow-card)]"
-        >
+        <form onSubmit={handleSubmit} className="card-premium p-8 shadow-[var(--shadow-card)]">
           <h2 className="text-2xl font-bold">Candidate Registration</h2>
           <p className="mt-2 text-sm text-muted-foreground">
             Open submissions — we review every profile against current and upcoming mandates.

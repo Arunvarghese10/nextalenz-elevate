@@ -80,18 +80,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NexTalenz | Enterprise SAP Talent & AI Governance" },
+      { title: "NexTalenz | Enterprise Technology, Talent & Governance" },
       {
         name: "description",
         content:
-          "Dual-pillar enterprise consulting: elite SAP & enterprise application talent plus automated GRC and AI governance solutions.",
+          "Four-practice enterprise consultancy: Human Capital Technology & Modern ERP, GRC & AI Governance, Talent Solutions, and Product Engineering.",
       },
       { name: "author", content: "NexTalenz Consulting" },
-      { property: "og:title", content: "NexTalenz | Enterprise SAP Talent & AI Governance" },
+      { property: "og:title", content: "NexTalenz | Enterprise Technology, Talent & Governance" },
       {
         property: "og:description",
         content:
-          "Bridging elite SAP expertise and automated GRC & AI Governance to build resilient, future-ready organizations.",
+          "Specialist by design. Generalist by reach. Modern ERP, AI governance, precision hiring and product engineering — one consultancy.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

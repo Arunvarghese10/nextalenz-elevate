@@ -9,7 +9,7 @@ export const Route = createFileRoute("/grc-ai-governance/continuous-controls-mon
       {
         name: "description",
         content:
-          "Continuous controls monitoring from NexTalenz and Optro.ai — always-on control testing and audit-ready evidence. Detailed page content coming soon.",
+          "Continuous controls monitoring from NexTalenz and Optro.ai — deploy AI-driven recommendations and pre-built templates to automate control verification.",
       },
       { property: "og:title", content: "Continuous Controls Monitoring | NexTalenz" },
       {
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/grc-ai-governance/continuous-controls-mon
     <GrcSubPage
       eyebrow="GRC & AI Governance"
       title="Continuous Controls Monitoring"
-      body="Detailed service content for this capability is being finalised. In the meantime, our team can walk you through scope, timelines and deliverables directly."
+      body="Deploy AI-driven recommendations and pre-built templates to automate control verification. Detailed page content is being finalised — in the meantime, our team can walk you through scope, timelines and deliverables directly."
     />
   ),
 });
