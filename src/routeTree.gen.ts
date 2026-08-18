@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as CodeOfConductRouteImport } from './routes/code-of-conduct'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EnterpriseApplicationsRouteImport } from './routes/enterprise-applications'
 import { Route as GrcAiGovernanceRouteImport } from './routes/grc-ai-governance'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -43,6 +44,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnterpriseApplicationsRoute = EnterpriseApplicationsRouteImport.update({
+  id: '/enterprise-applications',
+  path: '/enterprise-applications',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GrcAiGovernanceRoute = GrcAiGovernanceRouteImport.update({
   id: '/grc-ai-governance',
   path: '/grc-ai-governance',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/careers': typeof CareersRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/contact': typeof ContactRoute
+  '/enterprise-applications': typeof EnterpriseApplicationsRoute
   '/grc-ai-governance': typeof GrcAiGovernanceRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/careers': typeof CareersRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/contact': typeof ContactRoute
+  '/enterprise-applications': typeof EnterpriseApplicationsRoute
   '/grc-ai-governance': typeof GrcAiGovernanceRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/careers': typeof CareersRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/contact': typeof ContactRoute
+  '/enterprise-applications': typeof EnterpriseApplicationsRoute
   '/grc-ai-governance': typeof GrcAiGovernanceRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/code-of-conduct'
     | '/contact'
+    | '/enterprise-applications'
     | '/grc-ai-governance'
     | '/privacy-policy'
     | '/services'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/code-of-conduct'
     | '/contact'
+    | '/enterprise-applications'
     | '/grc-ai-governance'
     | '/privacy-policy'
     | '/services'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/code-of-conduct'
     | '/contact'
+    | '/enterprise-applications'
     | '/grc-ai-governance'
     | '/privacy-policy'
     | '/services'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   CareersRoute: typeof CareersRoute
   CodeOfConductRoute: typeof CodeOfConductRoute
   ContactRoute: typeof ContactRoute
+  EnterpriseApplicationsRoute: typeof EnterpriseApplicationsRoute
   GrcAiGovernanceRoute: typeof GrcAiGovernanceRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRoute
@@ -171,6 +184,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/enterprise-applications': {
+      id: '/enterprise-applications'
+      path: '/enterprise-applications'
+      fullPath: '/enterprise-applications'
+      preLoaderRoute: typeof EnterpriseApplicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/grc-ai-governance': {
       id: '/grc-ai-governance'
       path: '/grc-ai-governance'
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   CareersRoute: CareersRoute,
   CodeOfConductRoute: CodeOfConductRoute,
   ContactRoute: ContactRoute,
+  EnterpriseApplicationsRoute: EnterpriseApplicationsRoute,
   GrcAiGovernanceRoute: GrcAiGovernanceRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRoute,
