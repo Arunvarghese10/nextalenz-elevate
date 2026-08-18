@@ -33,7 +33,8 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-navy-foreground/10 bg-navy text-navy-foreground">
+    <footer className="relative bg-navy text-navy-foreground">
+      <div className="h-px w-full bg-gradient-gold" aria-hidden />
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
           <Link to="/" className="text-xl font-extrabold tracking-[0.14em]">
