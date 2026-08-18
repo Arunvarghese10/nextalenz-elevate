@@ -39,7 +39,7 @@ export function Header() {
 
         <div className="hidden lg:block">
           <Button asChild variant="hero" size="default">
-            <Link to="/contact">Book a Strategy Session</Link>
+            <Link to="/contact" search={{ pillar: undefined }}>Book a Strategy Session</Link>
           </Button>
         </div>
 
@@ -64,7 +64,7 @@ export function Header() {
                 </Link>
               ))}
               <Button asChild variant="hero" size="lg" className="mt-4">
-                <Link to="/contact" onClick={() => setOpen(false)}>
+                <Link to="/contact" search={{ pillar: undefined }} onClick={() => setOpen(false)}>
                   Book a Strategy Session
                 </Link>
               </Button>

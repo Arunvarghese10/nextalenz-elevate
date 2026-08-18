@@ -119,7 +119,7 @@ function AboutPage() {
             ))}
           </ul>
           <Button asChild variant="hero" size="lg" className="mt-10">
-            <Link to="/contact">
+            <Link to="/contact" search={{ pillar: undefined }}>
               Book a Strategy Session <ArrowRight />
             </Link>
           </Button>
