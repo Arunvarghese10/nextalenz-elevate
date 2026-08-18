@@ -48,11 +48,13 @@ function AboutPage() {
     <>
       <section className="relative overflow-hidden navy-gradient text-navy-foreground">
         <div className="absolute inset-0 surface-grid opacity-60" aria-hidden />
+        <div className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70" aria-hidden />
+        <div className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-navy-foreground/70">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-navy-foreground/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
             About NexTalenz
           </span>
-          <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+          <h1 className="rise mt-5 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
             Connecting World-Class Capability with Enterprise Vision
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-foreground/75">
@@ -117,7 +119,7 @@ function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-border bg-card p-8 lg:flex-row lg:items-center">
+        <div className="flex flex-col items-start justify-between gap-6 card-premium p-8 lg:flex-row lg:items-center">
           <div>
             <h2 className="text-2xl font-bold">Work with NexTalenz</h2>
             <p className="mt-2 text-sm text-muted-foreground">

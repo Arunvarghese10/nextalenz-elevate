@@ -75,12 +75,15 @@ function ServicesPage() {
     <>
       <section className="relative overflow-hidden navy-gradient text-navy-foreground">
         <div className="absolute inset-0 surface-grid opacity-60" aria-hidden />
+        <div className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70" aria-hidden />
+        <div className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-sap-foreground/70">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-navy-foreground/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
             Pillar 1 · SAP &amp; Enterprise Apps
           </span>
-          <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
-            Specialized SAP &amp; Enterprise Application Talent
+          <h1 className="rise mt-5 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+            Specialized SAP &amp; Enterprise
+            <span className="text-gradient-gold"> Application Talent</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-navy-foreground/75">
             Flexible engagement models engineered for speed, technical depth, and enterprise
@@ -116,7 +119,7 @@ function ServicesPage() {
             ].map((item) => (
               <li
                 key={item}
-                className="rounded-lg border border-border bg-background p-4 text-sm text-muted-foreground"
+                className="card-premium p-4 text-sm text-muted-foreground"
               >
                 <CheckCircle2 className="mb-2 size-4 text-sap" />
                 {item}
@@ -134,7 +137,7 @@ function ServicesPage() {
               <article
                 key={model.id}
                 id={model.id}
-                className="scroll-mt-20 rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)]"
+                className="scroll-mt-20 card-premium hover:card-premium-hover p-7"
               >
                 <div className="grid size-11 place-items-center rounded-lg bg-sap-soft text-sap">
                   <model.icon className="size-5" />
@@ -174,7 +177,7 @@ function ServicesPage() {
               ["Integration & BTP", "Extension, API and cloud architecture delivery."],
               ["Hypercare & Support", "Stabilization squads post go-live."],
             ].map(([title, copy]) => (
-              <div key={title} className="rounded-lg border border-border bg-background p-5">
+              <div key={title} className="card-premium p-5">
                 <h3 className="font-semibold">{title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{copy}</p>
               </div>
@@ -195,7 +198,7 @@ function ServicesPage() {
             </li>
           ))}
         </ul>
-        <div className="mt-12 rounded-2xl border border-border bg-card p-8">
+        <div className="mt-12 card-premium p-8">
           <h3 className="text-xl font-semibold">Need governance alongside delivery?</h3>
           <p className="mt-2 text-sm text-muted-foreground">
             Our GRC &amp; AI Governance practice embeds access controls and continuous compliance

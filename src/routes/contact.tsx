@@ -67,6 +67,8 @@ function ContactPage() {
     <>
       <section className="relative overflow-hidden navy-gradient text-navy-foreground">
         <div className="absolute inset-0 surface-grid opacity-60" aria-hidden />
+        <div className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70" aria-hidden />
+        <div className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <h1 className="max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
             Let&apos;s scope your next enterprise engagement
@@ -81,7 +83,7 @@ function ContactPage() {
         <div className="grid gap-10 lg:grid-cols-[1.25fr_1fr]">
           <form
             onSubmit={handleSubmit}
-            className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]"
+            className="card-premium p-8 shadow-[var(--shadow-card)]"
           >
             <h2 className="text-2xl font-bold">Enquiry Form</h2>
             <div className="mt-6 grid gap-5 sm:grid-cols-2">

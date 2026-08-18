@@ -72,12 +72,14 @@ function GrcPage() {
     <>
       <section className="relative overflow-hidden navy-gradient text-navy-foreground">
         <div className="absolute inset-0 surface-grid opacity-60" aria-hidden />
+        <div className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70" aria-hidden />
+        <div className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-          <span className="inline-flex items-center gap-2 rounded-full border border-grc/40 bg-grc/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-navy-foreground/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
             <ShieldCheck className="size-3.5" />
             Enterprise Risk &amp; Compliance Automation
           </span>
-          <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+          <h1 className="rise mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
             Autonomous GRC &amp; Enterprise AI Governance
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-navy-foreground/75">
@@ -100,7 +102,7 @@ function GrcPage() {
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="relative overflow-hidden rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-lift)]"
+              className="relative overflow-hidden card-premium hover:card-premium-hover p-7 transition-shadow hover:shadow-[var(--shadow-lift)]"
             >
               <span className="absolute inset-x-0 top-0 h-1 bg-grc" aria-hidden />
               <div className="grid size-11 place-items-center rounded-lg bg-grc-soft text-grc">

@@ -75,11 +75,13 @@ function CareersPage() {
     <>
       <section className="relative overflow-hidden navy-gradient text-navy-foreground">
         <div className="absolute inset-0 surface-grid opacity-60" aria-hidden />
+        <div className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70" aria-hidden />
+        <div className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-navy-foreground/70">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-navy-foreground/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
             Talent Network
           </span>
-          <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+          <h1 className="rise mt-5 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
             Join the NexTalenz Global Consultant Network
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-navy-foreground/75">
@@ -104,7 +106,7 @@ function CareersPage() {
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
         <form
           onSubmit={handleSubmit}
-          className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]"
+          className="card-premium p-8 shadow-[var(--shadow-card)]"
         >
           <h2 className="text-2xl font-bold">Candidate Registration</h2>
           <p className="mt-2 text-sm text-muted-foreground">
