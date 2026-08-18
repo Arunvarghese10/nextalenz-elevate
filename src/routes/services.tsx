@@ -82,7 +82,8 @@ function ServicesPage() {
             Pillar 1 · SAP &amp; Enterprise Apps
           </span>
           <h1 className="rise mt-5 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
-            Specialized SAP &amp; Enterprise Application Talent
+            Specialized SAP &amp; Enterprise
+            <span className="text-gradient-gold"> Application Talent</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-navy-foreground/75">
             Flexible engagement models engineered for speed, technical depth, and enterprise
