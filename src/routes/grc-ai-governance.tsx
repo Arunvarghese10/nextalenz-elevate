@@ -100,7 +100,7 @@ function GrcPage() {
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="relative overflow-hidden rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-lift)]"
+              className="relative overflow-hidden card-premium hover:card-premium-hover p-7 transition-shadow hover:shadow-[var(--shadow-lift)]"
             >
               <span className="absolute inset-x-0 top-0 h-1 bg-grc" aria-hidden />
               <div className="grid size-11 place-items-center rounded-lg bg-grc-soft text-grc">

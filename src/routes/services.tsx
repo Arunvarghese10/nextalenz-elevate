@@ -116,7 +116,7 @@ function ServicesPage() {
             ].map((item) => (
               <li
                 key={item}
-                className="rounded-lg border border-border bg-background p-4 text-sm text-muted-foreground"
+                className="card-premium p-4 text-sm text-muted-foreground"
               >
                 <CheckCircle2 className="mb-2 size-4 text-sap" />
                 {item}
@@ -134,7 +134,7 @@ function ServicesPage() {
               <article
                 key={model.id}
                 id={model.id}
-                className="scroll-mt-20 rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)]"
+                className="scroll-mt-20 card-premium hover:card-premium-hover p-7"
               >
                 <div className="grid size-11 place-items-center rounded-lg bg-sap-soft text-sap">
                   <model.icon className="size-5" />
@@ -174,7 +174,7 @@ function ServicesPage() {
               ["Integration & BTP", "Extension, API and cloud architecture delivery."],
               ["Hypercare & Support", "Stabilization squads post go-live."],
             ].map(([title, copy]) => (
-              <div key={title} className="rounded-lg border border-border bg-background p-5">
+              <div key={title} className="card-premium p-5">
                 <h3 className="font-semibold">{title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{copy}</p>
               </div>
@@ -195,7 +195,7 @@ function ServicesPage() {
             </li>
           ))}
         </ul>
-        <div className="mt-12 rounded-2xl border border-border bg-card p-8">
+        <div className="mt-12 card-premium p-8">
           <h3 className="text-xl font-semibold">Need governance alongside delivery?</h3>
           <p className="mt-2 text-sm text-muted-foreground">
             Our GRC &amp; AI Governance practice embeds access controls and continuous compliance

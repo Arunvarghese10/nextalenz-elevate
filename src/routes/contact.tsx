@@ -81,7 +81,7 @@ function ContactPage() {
         <div className="grid gap-10 lg:grid-cols-[1.25fr_1fr]">
           <form
             onSubmit={handleSubmit}
-            className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]"
+            className="card-premium p-8 shadow-[var(--shadow-card)]"
           >
             <h2 className="text-2xl font-bold">Enquiry Form</h2>
             <div className="mt-6 grid gap-5 sm:grid-cols-2">

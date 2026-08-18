@@ -117,7 +117,7 @@ function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-border bg-card p-8 lg:flex-row lg:items-center">
+        <div className="flex flex-col items-start justify-between gap-6 card-premium p-8 lg:flex-row lg:items-center">
           <div>
             <h2 className="text-2xl font-bold">Work with NexTalenz</h2>
             <p className="mt-2 text-sm text-muted-foreground">

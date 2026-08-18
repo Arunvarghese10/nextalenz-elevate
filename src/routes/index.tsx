@@ -110,7 +110,7 @@ function Home() {
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          <article className="group relative overflow-hidden rounded-xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-lift)]">
+          <article className="group relative overflow-hidden card-premium hover:card-premium-hover p-8">
             <span className="absolute inset-x-0 top-0 h-1 bg-sap" aria-hidden />
             <div className="grid size-11 place-items-center rounded-lg bg-sap-soft text-sap">
               <Layers className="size-5" />
@@ -138,7 +138,7 @@ function Home() {
             </Link>
           </article>
 
-          <article className="group relative overflow-hidden rounded-xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-lift)]">
+          <article className="group relative overflow-hidden card-premium hover:card-premium-hover p-8">
             <span className="absolute inset-x-0 top-0 h-1 bg-grc" aria-hidden />
             <div className="grid size-11 place-items-center rounded-lg bg-grc-soft text-grc">
               <ShieldCheck className="size-5" />
@@ -178,7 +178,7 @@ function Home() {
                 key={item.hash}
                 to="/services"
                 hash={item.hash}
-                className="rounded-xl border border-border bg-background p-6 transition-colors hover:border-sap/50"
+                className="card-premium hover:card-premium-hover p-6"
               >
                 <item.icon className="size-5 text-sap" />
                 <h3 className="mt-4 font-semibold">{item.title}</h3>

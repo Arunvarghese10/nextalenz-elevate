@@ -104,7 +104,7 @@ function CareersPage() {
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
         <form
           onSubmit={handleSubmit}
-          className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]"
+          className="card-premium p-8 shadow-[var(--shadow-card)]"
         >
           <h2 className="text-2xl font-bold">Candidate Registration</h2>
           <p className="mt-2 text-sm text-muted-foreground">
