@@ -1,23 +1,26 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock, Phone } from "lucide-react";
 
 import { SITE } from "@/lib/site";
 
 const columns = [
   {
-    title: "SAP & Enterprise Apps",
+    title: "Enterprise Applications",
     links: [
-      { label: "Placement Services", to: "/services" as const },
-      { label: "Talent Acquisition", to: "/services" as const },
-      { label: "Project Consulting", to: "/services" as const },
+      { label: "Contract & Permanent Placement", to: "/enterprise-applications" as const },
+      { label: "SAP Talent Acquisition", to: "/enterprise-applications" as const },
+      { label: "SAP Project Consulting", to: "/enterprise-applications" as const },
     ],
   },
   {
     title: "GRC & AI Governance",
     links: [
-      { label: "Continuous Compliance", to: "/grc-ai-governance" as const },
-      { label: "AI Governance", to: "/grc-ai-governance" as const },
-      { label: "Control Testing", to: "/grc-ai-governance" as const },
+      { label: "AI Risk Assessment", to: "/grc-ai-governance/ai-risk-assessment" as const },
+      {
+        label: "Continuous Controls Monitoring",
+        to: "/grc-ai-governance/continuous-controls-monitoring" as const,
+      },
+      { label: "Optro.ai Partnership", to: "/grc-ai-governance/optro-ai-partnership" as const },
     ],
   },
   {
@@ -25,6 +28,7 @@ const columns = [
     links: [
       { label: "About Us", to: "/about" as const },
       { label: "Careers", to: "/careers" as const },
+      { label: "Coming Next →", to: "/roadmap" as const },
       { label: "Privacy Policy", to: "/privacy-policy" as const },
       { label: "Code of Conduct", to: "/code-of-conduct" as const },
     ],
@@ -41,8 +45,8 @@ export function Footer() {
             NEX<span className="text-sap">TALENZ</span>
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-navy-foreground/60">
-            {SITE.name} delivers elite SAP &amp; enterprise application talent alongside automated
-            GRC and AI governance solutions for global enterprises.
+            {SITE.name} pairs proven SAP talent and ERP delivery with Optro.ai-powered AI
+            Governance, Risk &amp; Compliance.
           </p>
           <ul className="mt-5 space-y-2 text-sm text-navy-foreground/60">
 
@@ -55,8 +59,16 @@ export function Footer() {
               {SITE.email}
             </li>
             <li className="flex items-start gap-2">
+              <Phone className="mt-0.5 size-4 shrink-0 text-sap" />
+              <span>
+                {SITE.phone}
+                <br />
+                Toll Free: {SITE.tollFree}
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
               <Clock className="mt-0.5 size-4 shrink-0 text-sap" />
-              Response SLA: {SITE.responseSla}
+              Replies {SITE.responseSla.toLowerCase()}
             </li>
           </ul>
         </div>

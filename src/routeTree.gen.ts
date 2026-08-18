@@ -14,9 +14,13 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as CodeOfConductRouteImport } from './routes/code-of-conduct'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as GrcAiGovernanceRouteImport } from './routes/grc-ai-governance'
+import { Route as EnterpriseApplicationsRouteImport } from './routes/enterprise-applications'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
-import { Route as ServicesRouteImport } from './routes/services'
+import { Route as RoadmapRouteImport } from './routes/roadmap'
+import { Route as GrcAiGovernanceIndexRouteImport } from './routes/grc-ai-governance/index'
+import { Route as GrcAiGovernanceAiRiskAssessmentRouteImport } from './routes/grc-ai-governance/ai-risk-assessment'
+import { Route as GrcAiGovernanceContinuousControlsMonitoringRouteImport } from './routes/grc-ai-governance/continuous-controls-monitoring'
+import { Route as GrcAiGovernanceOptroAiPartnershipRouteImport } from './routes/grc-ai-governance/optro-ai-partnership'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -43,9 +47,9 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GrcAiGovernanceRoute = GrcAiGovernanceRouteImport.update({
-  id: '/grc-ai-governance',
-  path: '/grc-ai-governance',
+const EnterpriseApplicationsRoute = EnterpriseApplicationsRouteImport.update({
+  id: '/enterprise-applications',
+  path: '/enterprise-applications',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
@@ -53,11 +57,34 @@ const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
+const RoadmapRoute = RoadmapRouteImport.update({
+  id: '/roadmap',
+  path: '/roadmap',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GrcAiGovernanceIndexRoute = GrcAiGovernanceIndexRouteImport.update({
+  id: '/grc-ai-governance/',
+  path: '/grc-ai-governance/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrcAiGovernanceAiRiskAssessmentRoute =
+  GrcAiGovernanceAiRiskAssessmentRouteImport.update({
+    id: '/grc-ai-governance/ai-risk-assessment',
+    path: '/grc-ai-governance/ai-risk-assessment',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GrcAiGovernanceContinuousControlsMonitoringRoute =
+  GrcAiGovernanceContinuousControlsMonitoringRouteImport.update({
+    id: '/grc-ai-governance/continuous-controls-monitoring',
+    path: '/grc-ai-governance/continuous-controls-monitoring',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GrcAiGovernanceOptroAiPartnershipRoute =
+  GrcAiGovernanceOptroAiPartnershipRouteImport.update({
+    id: '/grc-ai-governance/optro-ai-partnership',
+    path: '/grc-ai-governance/optro-ai-partnership',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -65,9 +92,13 @@ export interface FileRoutesByFullPath {
   '/careers': typeof CareersRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/contact': typeof ContactRoute
-  '/grc-ai-governance': typeof GrcAiGovernanceRoute
+  '/enterprise-applications': typeof EnterpriseApplicationsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/services': typeof ServicesRoute
+  '/roadmap': typeof RoadmapRoute
+  '/grc-ai-governance/ai-risk-assessment': typeof GrcAiGovernanceAiRiskAssessmentRoute
+  '/grc-ai-governance/continuous-controls-monitoring': typeof GrcAiGovernanceContinuousControlsMonitoringRoute
+  '/grc-ai-governance/optro-ai-partnership': typeof GrcAiGovernanceOptroAiPartnershipRoute
+  '/grc-ai-governance/': typeof GrcAiGovernanceIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -75,9 +106,13 @@ export interface FileRoutesByTo {
   '/careers': typeof CareersRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/contact': typeof ContactRoute
-  '/grc-ai-governance': typeof GrcAiGovernanceRoute
+  '/enterprise-applications': typeof EnterpriseApplicationsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/services': typeof ServicesRoute
+  '/roadmap': typeof RoadmapRoute
+  '/grc-ai-governance/ai-risk-assessment': typeof GrcAiGovernanceAiRiskAssessmentRoute
+  '/grc-ai-governance/continuous-controls-monitoring': typeof GrcAiGovernanceContinuousControlsMonitoringRoute
+  '/grc-ai-governance/optro-ai-partnership': typeof GrcAiGovernanceOptroAiPartnershipRoute
+  '/grc-ai-governance': typeof GrcAiGovernanceIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -86,9 +121,13 @@ export interface FileRoutesById {
   '/careers': typeof CareersRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/contact': typeof ContactRoute
-  '/grc-ai-governance': typeof GrcAiGovernanceRoute
+  '/enterprise-applications': typeof EnterpriseApplicationsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/services': typeof ServicesRoute
+  '/roadmap': typeof RoadmapRoute
+  '/grc-ai-governance/ai-risk-assessment': typeof GrcAiGovernanceAiRiskAssessmentRoute
+  '/grc-ai-governance/continuous-controls-monitoring': typeof GrcAiGovernanceContinuousControlsMonitoringRoute
+  '/grc-ai-governance/optro-ai-partnership': typeof GrcAiGovernanceOptroAiPartnershipRoute
+  '/grc-ai-governance/': typeof GrcAiGovernanceIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -98,9 +137,13 @@ export interface FileRouteTypes {
     | '/careers'
     | '/code-of-conduct'
     | '/contact'
-    | '/grc-ai-governance'
+    | '/enterprise-applications'
     | '/privacy-policy'
-    | '/services'
+    | '/roadmap'
+    | '/grc-ai-governance/ai-risk-assessment'
+    | '/grc-ai-governance/continuous-controls-monitoring'
+    | '/grc-ai-governance/optro-ai-partnership'
+    | '/grc-ai-governance/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -108,9 +151,13 @@ export interface FileRouteTypes {
     | '/careers'
     | '/code-of-conduct'
     | '/contact'
-    | '/grc-ai-governance'
+    | '/enterprise-applications'
     | '/privacy-policy'
-    | '/services'
+    | '/roadmap'
+    | '/grc-ai-governance/ai-risk-assessment'
+    | '/grc-ai-governance/continuous-controls-monitoring'
+    | '/grc-ai-governance/optro-ai-partnership'
+    | '/grc-ai-governance'
   id:
     | '__root__'
     | '/'
@@ -118,9 +165,13 @@ export interface FileRouteTypes {
     | '/careers'
     | '/code-of-conduct'
     | '/contact'
-    | '/grc-ai-governance'
+    | '/enterprise-applications'
     | '/privacy-policy'
-    | '/services'
+    | '/roadmap'
+    | '/grc-ai-governance/ai-risk-assessment'
+    | '/grc-ai-governance/continuous-controls-monitoring'
+    | '/grc-ai-governance/optro-ai-partnership'
+    | '/grc-ai-governance/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -129,9 +180,13 @@ export interface RootRouteChildren {
   CareersRoute: typeof CareersRoute
   CodeOfConductRoute: typeof CodeOfConductRoute
   ContactRoute: typeof ContactRoute
-  GrcAiGovernanceRoute: typeof GrcAiGovernanceRoute
+  EnterpriseApplicationsRoute: typeof EnterpriseApplicationsRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
-  ServicesRoute: typeof ServicesRoute
+  RoadmapRoute: typeof RoadmapRoute
+  GrcAiGovernanceAiRiskAssessmentRoute: typeof GrcAiGovernanceAiRiskAssessmentRoute
+  GrcAiGovernanceContinuousControlsMonitoringRoute: typeof GrcAiGovernanceContinuousControlsMonitoringRoute
+  GrcAiGovernanceOptroAiPartnershipRoute: typeof GrcAiGovernanceOptroAiPartnershipRoute
+  GrcAiGovernanceIndexRoute: typeof GrcAiGovernanceIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -171,11 +226,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/grc-ai-governance': {
-      id: '/grc-ai-governance'
-      path: '/grc-ai-governance'
-      fullPath: '/grc-ai-governance'
-      preLoaderRoute: typeof GrcAiGovernanceRouteImport
+    '/enterprise-applications': {
+      id: '/enterprise-applications'
+      path: '/enterprise-applications'
+      fullPath: '/enterprise-applications'
+      preLoaderRoute: typeof EnterpriseApplicationsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -185,11 +240,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
+    '/roadmap': {
+      id: '/roadmap'
+      path: '/roadmap'
+      fullPath: '/roadmap'
+      preLoaderRoute: typeof RoadmapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/grc-ai-governance/': {
+      id: '/grc-ai-governance/'
+      path: '/grc-ai-governance'
+      fullPath: '/grc-ai-governance/'
+      preLoaderRoute: typeof GrcAiGovernanceIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/grc-ai-governance/ai-risk-assessment': {
+      id: '/grc-ai-governance/ai-risk-assessment'
+      path: '/grc-ai-governance/ai-risk-assessment'
+      fullPath: '/grc-ai-governance/ai-risk-assessment'
+      preLoaderRoute: typeof GrcAiGovernanceAiRiskAssessmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/grc-ai-governance/continuous-controls-monitoring': {
+      id: '/grc-ai-governance/continuous-controls-monitoring'
+      path: '/grc-ai-governance/continuous-controls-monitoring'
+      fullPath: '/grc-ai-governance/continuous-controls-monitoring'
+      preLoaderRoute: typeof GrcAiGovernanceContinuousControlsMonitoringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/grc-ai-governance/optro-ai-partnership': {
+      id: '/grc-ai-governance/optro-ai-partnership'
+      path: '/grc-ai-governance/optro-ai-partnership'
+      fullPath: '/grc-ai-governance/optro-ai-partnership'
+      preLoaderRoute: typeof GrcAiGovernanceOptroAiPartnershipRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -201,9 +284,15 @@ const rootRouteChildren: RootRouteChildren = {
   CareersRoute: CareersRoute,
   CodeOfConductRoute: CodeOfConductRoute,
   ContactRoute: ContactRoute,
-  GrcAiGovernanceRoute: GrcAiGovernanceRoute,
+  EnterpriseApplicationsRoute: EnterpriseApplicationsRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
-  ServicesRoute: ServicesRoute,
+  RoadmapRoute: RoadmapRoute,
+  GrcAiGovernanceAiRiskAssessmentRoute: GrcAiGovernanceAiRiskAssessmentRoute,
+  GrcAiGovernanceContinuousControlsMonitoringRoute:
+    GrcAiGovernanceContinuousControlsMonitoringRoute,
+  GrcAiGovernanceOptroAiPartnershipRoute:
+    GrcAiGovernanceOptroAiPartnershipRoute,
+  GrcAiGovernanceIndexRoute: GrcAiGovernanceIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -30,7 +30,7 @@ export function Header() {
               to={link.to}
               className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
               activeProps={{ className: "text-foreground bg-accent" }}
-              activeOptions={{ exact: link.to === "/" }}
+              activeOptions={{ exact: false }}
             >
               {link.label}
             </Link>
@@ -39,7 +39,7 @@ export function Header() {
 
         <div className="hidden lg:block">
           <Button asChild variant="hero" size="default">
-            <Link to="/contact">Talk to an Expert</Link>
+            <Link to="/contact" search={{ pillar: undefined }}>Book a Strategy Session</Link>
           </Button>
         </div>
 
@@ -58,14 +58,14 @@ export function Header() {
                   onClick={() => setOpen(false)}
                   className="rounded-md px-3 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
                   activeProps={{ className: "text-foreground bg-accent" }}
-                  activeOptions={{ exact: link.to === "/" }}
+                  activeOptions={{ exact: false }}
                 >
                   {link.label}
                 </Link>
               ))}
               <Button asChild variant="hero" size="lg" className="mt-4">
-                <Link to="/contact" onClick={() => setOpen(false)}>
-                  Talk to an Expert
+                <Link to="/contact" search={{ pillar: undefined }} onClick={() => setOpen(false)}>
+                  Book a Strategy Session
                 </Link>
               </Button>
             </div>
