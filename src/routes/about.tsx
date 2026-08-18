@@ -54,7 +54,7 @@ function AboutPage() {
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-navy-foreground/70">
             About NexTalenz
           </span>
-          <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+          <h1 className="rise mt-5 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
             Connecting World-Class Capability with Enterprise Vision
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-foreground/75">

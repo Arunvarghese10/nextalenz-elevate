@@ -66,11 +66,12 @@ function Home() {
         <div className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-navy-foreground/20 bg-navy-foreground/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-navy-foreground/80">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-navy-foreground/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
               Dual-Pillar Enterprise Consulting
             </span>
-            <h1 className="mt-6 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
-              Modern Enterprise Talent &amp; AI Governance Solutions
+            <h1 className="rise mt-6 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
+              Modern Enterprise Talent &amp;{" "}
+              <span className="text-gradient-gold">AI Governance Solutions</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-foreground/75">
               Bridging elite SAP expertise and automated GRC &amp; AI Governance to build resilient,
@@ -104,7 +105,7 @@ function Home() {
       {/* Dual pillars */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold sm:text-4xl">Two practices. One delivery standard.</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">Two practices. <span className="text-gradient-gold">One delivery standard.</span></h2>
           <p className="mt-4 text-muted-foreground">
             Deep enterprise application capability paired with the governance frameworks modern
             organizations need to scale safely.
@@ -113,7 +114,7 @@ function Home() {
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <article className="group relative overflow-hidden card-premium hover:card-premium-hover p-8">
-            <span className="absolute inset-x-0 top-0 h-1 bg-sap" aria-hidden />
+            <span className="absolute inset-x-0 top-0 h-1 bg-gradient-gold" aria-hidden />
             <div className="grid size-11 place-items-center rounded-lg bg-sap-soft text-sap">
               <Layers className="size-5" />
             </div>
@@ -141,7 +142,7 @@ function Home() {
           </article>
 
           <article className="group relative overflow-hidden card-premium hover:card-premium-hover p-8">
-            <span className="absolute inset-x-0 top-0 h-1 bg-grc" aria-hidden />
+            <span className="absolute inset-x-0 top-0 h-1 bg-gradient-gold opacity-60" aria-hidden />
             <div className="grid size-11 place-items-center rounded-lg bg-grc-soft text-grc">
               <ShieldCheck className="size-5" />
             </div>
@@ -171,8 +172,9 @@ function Home() {
       </section>
 
       {/* Quick service navigation */}
-      <section className="border-y border-border bg-surface">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden border-y border-border bg-surface">
+        <div className="absolute inset-0 dot-grid opacity-40" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold sm:text-4xl">How we engage</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {quickLinks.map((item) => (

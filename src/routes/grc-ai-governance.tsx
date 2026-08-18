@@ -79,7 +79,7 @@ function GrcPage() {
             <ShieldCheck className="size-3.5" />
             Enterprise Risk &amp; Compliance Automation
           </span>
-          <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+          <h1 className="rise mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
             Autonomous GRC &amp; Enterprise AI Governance
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-navy-foreground/75">
