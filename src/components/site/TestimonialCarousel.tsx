@@ -39,7 +39,7 @@ export function TestimonialCarousel() {
     return () => clearInterval(id);
   }, []);
 
-  const active = TESTIMONIALS[index];
+  const active = TESTIMONIALS[index] ?? TESTIMONIALS[0]!;
 
   return (
     <div className="card-premium relative overflow-hidden p-8 sm:p-12">
