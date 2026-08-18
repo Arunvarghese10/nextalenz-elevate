@@ -65,7 +65,7 @@ export function Header() {
               ))}
               <Button asChild variant="hero" size="lg" className="mt-4">
                 <Link to="/contact" onClick={() => setOpen(false)}>
-                  Talk to an Expert
+                  Book a Strategy Session
                 </Link>
               </Button>
             </div>
