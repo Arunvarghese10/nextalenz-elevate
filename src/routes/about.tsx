@@ -1,23 +1,22 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Eye, Globe2, Handshake, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { FootprintBadges } from "@/components/site/FootprintBadges";
+import { COUNTRIES, DIFFERENTIATORS } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About NexTalenz — Enterprise Technology, Talent & Governance Since 2024" },
+      { title: "About Nextalenz — Workforce Technology & Talent Partner" },
       {
         name: "description",
         content:
-          "Founded 2024 in Brisbane, Australia. NexTalenz bridges enterprise software, human-capital technology, and product engineering with the talent to run it.",
+          "Founded in 2024 in Southport, Queensland, Nextalenz is an Australian partner for workforce technology, talent, consulting and managed services.",
       },
-      { property: "og:title", content: "About NexTalenz" },
+      { property: "og:title", content: "About Nextalenz" },
       {
         property: "og:description",
-        content:
-          "Founded in Brisbane, Australia, operating at the intersection of enterprise software, HCT, and product engineering.",
+        content: "An Australian company built around people and the systems they work in.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -26,24 +25,14 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const values = [
-  { title: "Integrity", copy: "We say what we mean. If we can't deliver, we tell you on day one." },
+const PROMISES = [
   {
-    title: "Depth",
-    copy: "Enterprise ERP, GRC, talent, and engineering are all we do. That depth shows up in every conversation.",
+    icon: ShieldCheck,
+    title: "Trust",
+    body: "We handle your information with complete confidentiality.",
   },
-  {
-    title: "Patience",
-    copy: "We'd rather take an extra week than place the wrong person, or ship the wrong control.",
-  },
-  { title: "Partnership", copy: "We invest in long-term client relationships, not transactions." },
-];
-
-const practices = [
-  "Human Capital Technology (HCT) & Modern ERP",
-  "GRC & AI Governance (Optro.ai alliance)",
-  "Talent Solutions & Enterprise RPO",
-  "Product Engineering",
+  { icon: Eye, title: "Transparency", body: "You're kept in the loop at every stage." },
+  { icon: Handshake, title: "Commitment", body: "We deliver on time, every time." },
 ];
 
 function AboutPage() {
@@ -55,88 +44,87 @@ function AboutPage() {
           className="pointer-events-none absolute -right-24 -top-32 size-[520px] gold-glow opacity-70"
           aria-hidden
         />
-        <div
-          className="pointer-events-none absolute -bottom-40 -left-24 size-[420px] gold-glow opacity-40"
-          aria-hidden
-        />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-navy-foreground/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
-            Founded 2024 · Brisbane, Australia
-          </span>
-          <h1 className="rise mt-5 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
-            Who we are.
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+          <h1 className="rise max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
+            About <span className="text-gradient-gold">Nextalenz</span>
           </h1>
-          <div className="mt-6 max-w-2xl space-y-4 text-lg leading-relaxed text-navy-foreground/75">
-            <p>
-              Founded in 2024 in Brisbane, Australia, NexTalenz Consulting operates at the
-              intersection of enterprise software, human-capital technology, and product
-              engineering.
-            </p>
-            <p>
-              We bridge the gap between complex enterprise platforms and the expert talent required
-              to deploy, optimize, and secure them.
-            </p>
-          </div>
+          <p className="mt-5 max-w-2xl text-lg text-navy-foreground/75">
+            An Australian company built around people and the systems they work in.
+          </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:px-8">
-        <blockquote className="text-xl font-medium leading-relaxed sm:text-2xl">
-          “Specialist by design. Generalist by reach. We listen first, scope smart, and only take on
-          the work we know we can deliver.”
-        </blockquote>
-        <p className="mt-5 text-sm text-muted-foreground">
-          Our clients call us partners — not vendors.
+      <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
+        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
+          Our Story
+        </span>
+        <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+          Nextalenz was founded in 2024 in Southport, Queensland. We started as a specialist
+          recruiter for SAP roles. Since then, we&apos;ve grown into a full partner for workforce
+          technology — helping businesses hire the right people, build the right tools, set up the
+          right systems, and keep everything running. We now work across every major workforce
+          platform, not just one.
         </p>
       </section>
 
       <section className="border-y border-border bg-surface">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold sm:text-4xl">Core values</h2>
-          <ol className="mt-10 grid gap-6 sm:grid-cols-2">
-            {values.map((value, index) => (
-              <li key={value.title} className="card-premium p-7">
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-gold">
-                  0{index + 1}
-                </span>
-                <h3 className="mt-3 text-lg font-semibold">{value.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{value.copy}</p>
-              </li>
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Our <span className="text-gradient-gold">Promise</span>
+          </h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            {PROMISES.map((item) => (
+              <div key={item.title} className="card-premium hover:card-premium-hover p-8">
+                <div className="grid size-11 place-items-center rounded-lg bg-sap-soft text-sap">
+                  <item.icon className="size-5" />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+              </div>
             ))}
-          </ol>
+          </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold sm:text-4xl">Global reach</h2>
-        <p className="mt-3 max-w-2xl text-muted-foreground">
-          Headquartered in Brisbane with regional delivery partners across APAC/ANZ, EMEA, and the
-          Americas.
-        </p>
-        <div className="mt-10">
-          <FootprintBadges body="Australia · New Zealand · Singapore · India · Philippines · United Kingdom · Ireland · Germany · Netherlands · UAE · United States · Canada · Mexico" />
+        <h2 className="text-3xl font-bold sm:text-4xl">Why Businesses Choose Us</h2>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {DIFFERENTIATORS.map((item) => (
+            <div key={item.title} className="card-premium hover:card-premium-hover p-7">
+              <h3 className="font-semibold">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="border-t border-border bg-surface">
+      <section className="border-y border-border bg-surface">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold sm:text-4xl">What we do</h2>
-          <ul className="mt-8 flex flex-wrap gap-2.5">
-            {practices.map((practice) => (
-              <li
-                key={practice}
-                className="rounded-full border border-border bg-background px-4 py-2 text-sm text-muted-foreground"
-              >
-                {practice}
-              </li>
-            ))}
-          </ul>
-          <Button asChild variant="hero" size="lg" className="mt-10">
-            <Link to="/contact" search={{ pillar: undefined }}>
-              Book a Strategy Session <ArrowRight />
-            </Link>
-          </Button>
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+              <h2 className="text-3xl font-bold sm:text-4xl">Where We Work</h2>
+              <p className="mt-4 text-muted-foreground">
+                We&apos;re headquartered in Australia, with teams delivering work in:
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {COUNTRIES.map((country) => (
+                <div key={country} className="card-premium p-6 text-center">
+                  <Globe2 className="mx-auto size-5 text-sap" />
+                  <p className="mt-3 font-semibold">{country}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 lg:px-8">
+        <Button asChild variant="hero" size="lg">
+          <Link to="/contact">
+            Contact Us <ArrowRight />
+          </Link>
+        </Button>
       </section>
     </>
   );
