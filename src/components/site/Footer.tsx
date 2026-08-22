@@ -90,7 +90,7 @@ export function Footer() {
 
       <div className="border-t border-navy-foreground/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-xs text-navy-foreground/45 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <p>{SITE.footprint}</p>
+          <p>{SITE.legalName}</p>
           <p>
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
