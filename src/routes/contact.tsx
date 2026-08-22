@@ -17,22 +17,19 @@ import {
 import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    pillar: search["pillar"] === "grc" || search["pillar"] === "erp" ? search["pillar"] : undefined,
-  }),
   head: () => ({
     meta: [
-      { title: "Contact NexTalenz — Talk to a Partner, Not a Chatbot" },
+      { title: "Contact Nextalenz — Talk to a Real Person" },
       {
         name: "description",
         content:
-          "Tell us about your next ERP program, hiring need, or GRC assessment. Replies within 1 business day, from a senior team member.",
+          "Tell us about your hiring need, workforce system project, or product build. We reply within 48 hours.",
       },
-      { property: "og:title", content: "Contact NexTalenz — Talk to a Partner, Not a Chatbot" },
+      { property: "og:title", content: "Contact Nextalenz — Talk to a Real Person" },
       {
         property: "og:description",
         content:
-          "Tell us about your next ERP program, hiring need, or GRC assessment. Replies within 1 business day.",
+          "Tell us what you're trying to solve — we reply within 48 hours.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -42,21 +39,17 @@ export const Route = createFileRoute("/contact")({
 });
 
 const OPTIONS = [
-  { label: "HCT & Modern ERP", pillar: "erp" },
-  { label: "GRC & AI Governance Assessment", pillar: "grc" },
-  { label: "Talent Solutions & RPO", pillar: "erp" },
-  { label: "Product Engineering", pillar: "erp" },
+  { label: "Staff Augmentation", pillar: "talent" },
+  { label: "Product Engineering & App Development", pillar: "engineering" },
+  { label: "Consulting & Transformation", pillar: "consulting" },
+  { label: "Managed Services & Outsourcing", pillar: "managed" },
   { label: "Something Else", pillar: "" },
 ] as const;
 
 function ContactPage() {
-  const { pillar: presetPillar } = Route.useSearch();
-  const [interest, setInterest] = useState(
-    presetPillar === "grc" ? "GRC / AI Governance Assessment" : "",
-  );
+  const [interest, setInterest] = useState("");
 
   const leadPillar = OPTIONS.find((option) => option.label === interest)?.pillar ?? "";
-  const showShortlistLine = leadPillar !== "grc";
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -64,7 +57,7 @@ function ContactPage() {
       toast.error("Please tell us what you're looking for.");
       return;
     }
-    toast.success("Enquiry received. A senior team member will reply within 1 business day.");
+    toast.success("Enquiry received. A senior team member will reply within 48 hours.");
     event.currentTarget.reset();
     setInterest("");
   };
@@ -83,13 +76,13 @@ function ContactPage() {
         />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <h1 className="rise max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">
-            Ready to modernize, scale, or secure your enterprise?{" "}
+            Ready to hire, build, or modernise?{" "}
             <span className="text-gradient-gold">Let&apos;s talk.</span>
           </h1>
           <ul className="mt-6 space-y-2 text-lg text-navy-foreground/75">
             <li>Talk to a partner, not a chatbot.</li>
-            {showShortlistLine && <li>From enquiry to shortlist, in 14 days.</li>}
-            <li>We&apos;ll reply within 1 business day.</li>
+            <li>A qualified shortlist in as little as 72 hours.</li>
+            <li>We&apos;ll reply within 48 hours.</li>
           </ul>
         </div>
       </section>
@@ -142,7 +135,7 @@ function ContactPage() {
                   id="message"
                   name="message"
                   rows={5}
-                  placeholder="Roles, program scope, or the governance gap you need closed."
+                  placeholder="Roles you need filled, systems you're moving to, or the product you want built."
                 />
               </div>
             </div>
@@ -153,7 +146,7 @@ function ContactPage() {
 
           <div className="space-y-6">
             <div className="card-premium p-7">
-              <h2 className="text-lg font-semibold">Replies within 1 business day.</h2>
+              <h2 className="text-lg font-semibold">Replies within 48 hours.</h2>
               <p className="mt-3 text-sm text-muted-foreground">
                 Every enquiry is read and responded to by a senior team member. No tickets. No
                 queues.
@@ -193,7 +186,7 @@ function ContactPage() {
         </div>
 
         <p className="mt-14 text-center text-sm text-muted-foreground">
-          Enterprise technology, talent &amp; governance — built for global enterprises since 2024.
+          Every Platform. One Partner.
         </p>
       </section>
     </>
