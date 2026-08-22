@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import { StatCounter } from "@/components/site/StatCounter";
 import { Button } from "@/components/ui/button";
 import { DIFFERENTIATORS, STATS } from "@/lib/site";
 
