@@ -7,32 +7,26 @@ const columns = [
   {
     title: "Services",
     links: [
-      { label: "HCT & Modern ERP", to: "/services" as const, hash: "hct-modern-erp" },
-      { label: "GRC & AI Governance", to: "/services" as const, hash: "grc-ai-governance" },
-      { label: "Talent Solutions", to: "/services" as const, hash: "talent-solutions" },
+      { label: "Staff Augmentation", to: "/services" as const, hash: "staff-augmentation" },
       { label: "Product Engineering", to: "/services" as const, hash: "product-engineering" },
+      { label: "Consulting & Transformation", to: "/services" as const, hash: "consulting" },
+      { label: "Managed Services", to: "/services" as const, hash: "managed-services" },
     ],
   },
   {
-    title: "GRC & AI Governance",
+    title: "Explore",
     links: [
-      { label: "Unified AI Governance", to: "/grc-ai-governance/unified-ai-governance" as const },
-      {
-        label: "Continuous Controls Monitoring",
-        to: "/grc-ai-governance/continuous-controls-monitoring" as const,
-      },
-      { label: "Predictive Cyber Risk", to: "/grc-ai-governance/predictive-cyber-risk" as const },
-      { label: "Optro.ai Partnership", to: "/grc-ai-governance/optro-ai-partnership" as const },
+      { label: "Industries", to: "/industries" as const },
+      { label: "Why Nextalenz", to: "/why-nextalenz" as const },
+      { label: "How We Work", to: "/how-we-work" as const },
+      { label: "Contact", to: "/contact" as const },
     ],
   },
   {
     title: "Company & Legal",
     links: [
       { label: "About Us", to: "/about" as const },
-      { label: "How We Work", to: "/how-we-work" as const },
-      { label: "Careers", to: "/careers" as const },
       { label: "Privacy Policy", to: "/privacy-policy" as const },
-      { label: "Code of Conduct", to: "/code-of-conduct" as const },
     ],
   },
 ];
