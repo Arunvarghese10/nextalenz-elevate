@@ -59,7 +59,14 @@ function WhyPage() {
       <section className="border-y border-border navy-gradient text-navy-foreground">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
           {STATS.map((stat) => (
-            <StatCounter key={stat.label} value={stat.value} label={stat.label} onDark />
+            <div key={stat.label} className="text-center">
+              <div className="text-4xl font-bold tracking-tight text-gradient-gold sm:text-5xl">
+                {stat.value}
+              </div>
+              <p className="mt-2 text-xs font-medium uppercase tracking-[0.12em] text-navy-foreground/60">
+                {stat.label}
+              </p>
+            </div>
           ))}
         </div>
       </section>
